@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="553.0" prefWidth="1455.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Members.MembersController">
+   <children>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="55.0" text="&lt;&lt;">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Label layoutX="21.0" layoutY="96.0" prefHeight="30.0" prefWidth="118.0" text="Member ID">
+         <font>
+            <Font name="Abyssinica SIL" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="memeberid" layoutX="185.0" layoutY="95.0" prefHeight="30.0" prefWidth="210.0" />
+      <Label layoutX="21.0" layoutY="138.0" prefHeight="29.0" prefWidth="78.0" text="Name">
+         <font>
+            <Font name="Abyssinica SIL" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name" layoutX="185.0" layoutY="137.0" prefHeight="30.0" prefWidth="210.0" />
+      <Label layoutX="21.0" layoutY="180.0" prefHeight="29.0" prefWidth="78.0" text="Surname">
+         <font>
+            <Font name="Abyssinica SIL" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="surname" layoutX="185.0" layoutY="179.0" prefHeight="30.0" prefWidth="210.0" />
+      <Label layoutX="21.0" layoutY="224.0" prefHeight="30.0" prefWidth="150.0" text="Date OF Birth">
+         <font>
+            <Font name="Abyssinica SIL" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="265.0" prefHeight="29.0" prefWidth="78.0" text="ID">
+         <font>
+            <Font name="Abyssinica SIL" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="id" layoutX="185.0" layoutY="264.0" prefHeight="30.0" prefWidth="210.0" />
+      <Label layoutX="21.0" layoutY="306.0" prefHeight="29.0" prefWidth="78.0" text="Contact">
+         <font>
+            <Font name="Abyssinica SIL" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="contact" layoutX="185.0" layoutY="305.0" prefHeight="30.0" prefWidth="210.0" />
+      <Label layoutX="21.0" layoutY="346.0" prefHeight="30.0" prefWidth="118.0" text="Date Joined">
+         <font>
+            <Font name="Abyssinica SIL" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="390.0" prefHeight="30.0" prefWidth="138.0" text="Member Type">
+         <font>
+            <Font name="Abyssinica SIL" size="19.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dob" layoutX="184.0" layoutY="220.0" prefHeight="30.0" prefWidth="210.0" />
+      <ComboBox fx:id="membertype" layoutX="184.0" layoutY="393.0" prefHeight="26.0" prefWidth="210.0" />
+      <DatePicker fx:id="datejoined" layoutX="184.0" layoutY="345.0" prefHeight="30.0" prefWidth="210.0" />
+      <Button layoutX="21.0" layoutY="447.0" mnemonicParsing="false" onMouseClicked="#Newmember" prefHeight="38.0" prefWidth="118.0" text="Save">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="159.0" layoutY="447.0" mnemonicParsing="false" onMouseClicked="#UpdateMmebers" prefHeight="38.0" prefWidth="118.0" text="Update">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="300.0" layoutY="447.0" mnemonicParsing="false" onMouseClicked="#DeleteMember" prefHeight="38.0" prefWidth="118.0" text="Delete">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <TableView fx:id="membertbl" layoutX="446.0" layoutY="94.0" onMouseClicked="#Ontableclick" prefHeight="442.0" prefWidth="994.0">
+        <columns>
+          <TableColumn fx:id="colmemberid" prefWidth="115.99996948242188" text="Member ID" />
+          <TableColumn fx:id="colname" prefWidth="106.4000244140625" text="Name" />
+            <TableColumn fx:id="colsurname" prefWidth="101.60003662109375" text="Surname" />
+            <TableColumn fx:id="coldob" prefWidth="95.20001220703125" text="DOB" />
+            <TableColumn fx:id="colid" minWidth="7.199951171875" prefWidth="132.0" text="ID" />
+            <TableColumn fx:id="colcontact" prefWidth="130.4000244140625" text="Contact" />
+            <TableColumn fx:id="coldatejoined" prefWidth="133.5999755859375" text="Date Joined" />
+            <TableColumn fx:id="colmembertype" prefWidth="173.5999755859375" text="Member Type" />
+        </columns>
+      </TableView>
+      <Button layoutX="21.0" layoutY="500.0" mnemonicParsing="false" onMouseClicked="#clearFields" prefHeight="38.0" prefWidth="402.0" text="Clear Fields">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

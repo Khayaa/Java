@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Payments.PaymentsController">
+   <content>
+      <AnchorPane id="AnchorPane" prefHeight="607.0" prefWidth="777.0">
+         <children>
+            <TextField fx:id="paymentid" layoutX="56.0" layoutY="136.0" prefHeight="26.0" prefWidth="199.0" promptText="Payment ID" />
+            <TextField fx:id="amount" layoutX="56.0" layoutY="227.0" prefHeight="26.0" prefWidth="199.0" promptText="Amount" />
+            <DatePicker fx:id="paydate" layoutX="56.0" layoutY="178.0" prefHeight="26.0" prefWidth="199.0" promptText="Date" />
+            <TableView fx:id="paytable" layoutX="309.0" layoutY="78.0" onMouseClicked="#OntableClick" prefHeight="487.0" prefWidth="438.0">
+              <columns>
+                <TableColumn fx:id="payidcol" prefWidth="150.4000244140625" text="Payment ID" />
+                  <TableColumn fx:id="paydatecol" prefWidth="150.4000244140625" text="Date" />
+                  <TableColumn fx:id="payamountcol" prefWidth="150.4000244140625" text="Amount" />
+              </columns>
+            </TableView>
+            <Button layoutX="56.0" layoutY="272.0" mnemonicParsing="false" onMouseClicked="#AddPay" text="Save" />
+            <Button layoutX="115.0" layoutY="272.0" mnemonicParsing="false" onMouseClicked="#UpdatePayment" text="Update" />
+            <Button layoutX="191.0" layoutY="272.0" mnemonicParsing="false" onMouseClicked="#deletePayment" text="Delete" />
+            <Button layoutX="57.0" layoutY="309.0" mnemonicParsing="false" onMouseClicked="#clearFields" prefHeight="26.0" prefWidth="186.0" text="clear Fields" />
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
