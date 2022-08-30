@@ -154,7 +154,7 @@ public class MembersController implements Initializable {
                             Class.forName("com.mysql.jdbc.Driver");
                             url = "jdbc:mysql://localhost:3306/test";
                             user = "root";
-                            password = "Khaya@130268";
+                            password = "";
                            con = DriverManager.getConnection(url,user ,password);
                            //MemberID ,Name ,Surname ,DateOfBirth ,ID ,Contact ,DateJoined ,Membertype , tblmembers
                             String sql = "UPDATE tblmembers SET Name ='" + name.getText() + "', Surname='" + surname.getText() +"', DateOfBirth ='"
@@ -203,7 +203,7 @@ public class MembersController implements Initializable {
                             Class.forName("com.mysql.jdbc.Driver");
                             url = "jdbc:mysql://localhost:3306/test";
                             user = "root";
-                            password = "Khaya@130268";
+                            password = "";
                            con = DriverManager.getConnection(url,user ,password);
                             String sql = "INSERT INTO tblmembers (MemberID ,Name ,Surname ,DateOfBirth ,ID ,Contact ,DateJoined ,Membertype) values(?,?,?,?,?,?,?,?)";
                             ps = con.prepareStatement(sql);
@@ -258,7 +258,7 @@ public class MembersController implements Initializable {
                                 Class.forName("com.mysql.jdbc.Driver");
                                 url = "jdbc:mysql://localhost:3306/test";
                                 user = "root";
-                                password = "Khaya@130268";
+                                password = "";
                                 con = DriverManager.getConnection(url,user ,password);
                                 String sql = "SELECT * FROM tblmembers";
                                 st = con.createStatement();
