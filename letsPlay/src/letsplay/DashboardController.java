@@ -70,7 +70,7 @@ public class DashboardController implements Initializable {
     public Connection GetConnection(){
         Connection conn ;
         try{
-           conn = DriverManager.getConnection("jdbc:mysql://localhost:/test?" +"user=root&password=Khaya@130268" );
+           conn = DriverManager.getConnection("jdbc:mysql://localhost:/test?" +"user=root&password=password" );
             return conn;
         
         }catch(Exception e){
