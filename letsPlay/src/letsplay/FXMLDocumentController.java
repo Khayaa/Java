@@ -55,7 +55,7 @@ public class FXMLDocumentController implements Initializable {
         try{
         Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
         conn =  DriverManager.getConnection("jdbc:mysql://localhost/test?" +
-                                   "user=root&password=Khaya@130268");
+                                   "user=root&password=password");
         
         
         
