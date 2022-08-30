@@ -64,7 +64,7 @@ public class DisplayController implements Initializable {
                                 Class.forName("com.mysql.jdbc.Driver");
                                 url = "jdbc:mysql://localhost:3306/test";
                                 user = "root";
-                                password = "Khaya@130268";
+                                password = "";
                                 con = DriverManager.getConnection(url,user ,password);
                                 String sql = "select tblmembers.ID ,tblmembers.Name , tblmembers.Surname ,tblmembers.DateOfBirth , \n" +
                                         "timestampdiff(YEAR ,tblmembers.DateOfBirth , curdate()) AS AGE,\n" +
