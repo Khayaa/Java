@@ -87,7 +87,7 @@ public class PaymentsController implements Initializable {
                         Class.forName("com.mysql.jdbc.Driver");
                         url = "jdbc:mysql://localhost:3306/test";
                         user = "root";
-                        password = "Khaya@130268";
+                        password = "password";
                         con = DriverManager.getConnection(url,user ,password);
                         String sql = "INSERT INTO tblpayments(PaymentsID, DatePay, Amount) values(?,?,?)";
                         ps = con.prepareStatement(sql);
@@ -178,7 +178,7 @@ public class PaymentsController implements Initializable {
                      Class.forName("com.mysql.jdbc.Driver");
                         url = "jdbc:mysql://localhost:3306/test";
                         user = "root";
-                        password = "Khaya@130268";
+                        password = "password";
                         con = DriverManager.getConnection(url,user ,password);
                         //tblpayments(PaymentsID, DatePay, Amount) values
                         String sql = "DELETE FROM tblpayments WHERE PaymentsID=?";
@@ -227,7 +227,7 @@ public class PaymentsController implements Initializable {
                                 Class.forName("com.mysql.jdbc.Driver");
                                 url = "jdbc:mysql://localhost:3306/test";
                                 user = "root";
-                                password = "Khaya@130268";
+                                password = "password";
                                 con = DriverManager.getConnection(url,user ,password);
                                 String sql = "SELECT * FROM tblpayments";
                                 st = con.createStatement();
